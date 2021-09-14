@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/errors")
+@RequestMapping("/api/errors")
 public class ErrorController {
     private final ErrorService errorService;
 
@@ -28,12 +28,12 @@ public class ErrorController {
         return ResponseEntity.ok(errorService.findById(id));
     }
 
-    @GetMapping("/code/{errorCode}")
+    @GetMapping("/code/{error_code}")
     public ResponseEntity<List<ErrorEntity>> findByErrorCode(@PathVariable int errorCode) {
         return ResponseEntity.ok(errorService.findByErrorCode(errorCode));
     }
 
-    @RequestMapping("/code/errorDate")
+    @RequestMapping("/code/error_date")
     public ResponseEntity<List<ErrorEntity>> findByDate(@RequestParam(value = "begin",required = false) String beginDate, @RequestParam(value = "end",required = false) String endDate) {
         System.out.println(beginDate+" / "+endDate);
         return ResponseEntity.ok(errorService.findByDate(beginDate,endDate));

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>dev.patika.fifthhomework.model.BaseEntity</OriginalElement>
+  <nodes>
+    <node x="437.93333333333334" y="150.0">dev.patika.fifthhomework.model.Student</node>
+    <node x="-219.98338870431894" y="0.0">dev.patika.fifthhomework.model.SalaryUpdateLog</node>
+    <node x="0.0" y="344.0">dev.patika.fifthhomework.model.GuestInstructor</node>
+    <node x="342.25" y="0.0">dev.patika.fifthhomework.model.BaseEntity</node>
+    <node x="616.9333333333334" y="150.0">dev.patika.fifthhomework.model.Course</node>
+    <node x="265.93333333333334" y="172.0">dev.patika.fifthhomework.exception.ErrorEntity</node>
+    <node x="86.93333333333334" y="161.0">dev.patika.fifthhomework.model.Instructor</node>
+    <node x="174.0" y="344.0">dev.patika.fifthhomework.model.RegularInstructor</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="dev.patika.fifthhomework.model.RegularInstructor" target="dev.patika.fifthhomework.model.Instructor" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="257.0" y="319.0" />
+      <point x="166.43333333333334" y="319.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="dev.patika.fifthhomework.model.Instructor" target="dev.patika.fifthhomework.model.BaseEntity" relationship="GENERALIZATION">
+      <point x="0.0" y="-61.0" />
+      <point x="166.43333333333334" y="125.0" />
+      <point x="430.25" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="dev.patika.fifthhomework.model.GuestInstructor" target="dev.patika.fifthhomework.model.Instructor" relationship="GENERALIZATION">
+      <point x="0.0" y="-28.0" />
+      <point x="77.0" y="319.0" />
+      <point x="166.43333333333334" y="319.0" />
+      <point x="0.0" y="61.0" />
+    </edge>
+    <edge source="dev.patika.fifthhomework.model.Course" target="dev.patika.fifthhomework.model.BaseEntity" relationship="GENERALIZATION">
+      <point x="0.0" y="-72.0" />
+      <point x="701.4333333333334" y="125.0" />
+      <point x="430.25" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="dev.patika.fifthhomework.exception.ErrorEntity" target="dev.patika.fifthhomework.model.BaseEntity" relationship="GENERALIZATION">
+      <point x="0.0" y="-50.0" />
+      <point x="341.93333333333334" y="125.0" />
+      <point x="430.25" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+    <edge source="dev.patika.fifthhomework.model.Student" target="dev.patika.fifthhomework.model.BaseEntity" relationship="GENERALIZATION">
+      <point x="0.0" y="-72.0" />
+      <point x="517.4333333333334" y="125.0" />
+      <point x="430.25" y="125.0" />
+      <point x="0.0" y="50.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.8637015781922525" showDependencies="false" x="393.0" y="339.0" />
+  <SelectedNodes>
+    <node>dev.patika.fifthhomework.model.SalaryUpdateLog</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

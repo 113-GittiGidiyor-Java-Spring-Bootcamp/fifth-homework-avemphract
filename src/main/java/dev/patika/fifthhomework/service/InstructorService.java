@@ -2,7 +2,6 @@ package dev.patika.fifthhomework.service;
 
 import dev.patika.fifthhomework.exception.AbsentEntityException;
 import dev.patika.fifthhomework.exception.InstructorIsAlreadyExistException;
-import dev.patika.fifthhomework.mapper.InstructorMapper;
 import dev.patika.fifthhomework.model.*;
 import dev.patika.fifthhomework.repository.InstructorRepository;
 import dev.patika.fifthhomework.repository.SalaryUpdateInfoRepository;
@@ -125,18 +124,19 @@ public class InstructorService implements BaseService<Instructor> {
     @Transactional
     public Instructor updateSalary(int id, double percent) {
         Instructor instructor = instructorRepository.findById(id).get();
-        SalaryUpdateLog salaryUpdateLog=new SalaryUpdateLog();
-        double oldSalary=0;
-        double newSalary=0;
+        SalaryUpdateLog salaryUpdateLog = new SalaryUpdateLog();
+        double oldSalary = 0;
+        double newSalary = 0;
         if (instructor instanceof GuestInstructor) {
             oldSalary = ((GuestInstructor) instructor).getHourlySalary();
-            ((GuestInstructor) instructor).setHourlySalary(oldSalary * percent);
-            newSalary=((GuestInstructor) instructor).getHourlySalary();
+            ((GuestInstructor) instructor).setHourlySalary(oldSalary * (1 + percent));
+            newSalary = ((GuestInstructor) instructor).getHourlySalary();
         } else if (instructor instanceof RegularInstructor) {
             oldSalary = ((RegularInstructor) instructor).getConstantSalary();
-            ((RegularInstructor) instructor).setConstantSalary(oldSalary * percent);
-            newSalary=((RegularInstructor) instructor).getConstantSalary();
+            ((RegularInstructor) instructor).setConstantSalary(oldSalary * (1 + percent));
+            newSalary = ((RegularInstructor) instructor).getConstantSalary();
         }
+
 
         salaryUpdateLog.setSessionId(salaryUpdateRequestInfo.getSessionId());
         salaryUpdateLog.setClientURL(salaryUpdateRequestInfo.getClientUrl());
@@ -161,8 +161,8 @@ public class InstructorService implements BaseService<Instructor> {
     @Transactional(readOnly = true)
     public List<Instructor> getHighestSalaryInstructor() {
         List<Instructor> instructorList = new ArrayList<>();
-        instructorList.addAll(instructorRepository.getGuestInstructorsSortFromSalary().subList(0, (int) Math.min(3,instructorRepository.getGuestInstructorCount())));
-        instructorList.addAll(instructorRepository.getRegularInstructorsSortFromSalary().subList(0, (int) Math.min(3,instructorRepository.getRegularInstructorCount())));
+        instructorList.addAll(instructorRepository.getGuestInstructorsSortFromSalary().subList(0, (int) Math.min(3, instructorRepository.getGuestInstructorCount())));
+        instructorList.addAll(instructorRepository.getRegularInstructorsSortFromSalary().subList(0, (int) Math.min(3, instructorRepository.getRegularInstructorCount())));
         return instructorList;
     }
 

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-@RequestMapping("/salaryUpdateLogs")
+@RequestMapping("/api/salary_update_logs")
 public class SalaryUpdateLogController {
     private final SalaryUpdateLogService service;
     private final SalaryUpdateLogMapper mapper;

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>dev.patika.fifthhomework.controller.BaseController</OriginalElement>
+  <nodes>
+    <node x="821.0" y="205.0">dev.patika.fifthhomework.controller.CourseController</node>
+    <node x="424.0" y="194.0">dev.patika.fifthhomework.controller.StudentController</node>
+    <node x="0.0" y="194.0">dev.patika.fifthhomework.controller.InstructorController</node>
+    <node x="0.0" y="449.0">dev.patika.fifthhomework.controller.SalaryUpdateLogController</node>
+    <node x="458.0" y="449.0">dev.patika.fifthhomework.controller.ErrorController</node>
+    <node x="495.5" y="0.0">dev.patika.fifthhomework.controller.BaseController</node>
+    <node x="0.0" y="616.0">dev.patika.fifthhomework.controller.RandomEntityGeneratorController</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="dev.patika.fifthhomework.controller.StudentController" target="dev.patika.fifthhomework.controller.BaseController" relationship="REALIZATION">
+      <point x="0.0" y="-105.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="dev.patika.fifthhomework.controller.InstructorController" target="dev.patika.fifthhomework.controller.BaseController" relationship="REALIZATION">
+      <point x="0.0" y="-105.0" />
+      <point x="202.0" y="169.0" />
+      <point x="612.5" y="169.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+    <edge source="dev.patika.fifthhomework.controller.CourseController" target="dev.patika.fifthhomework.controller.BaseController" relationship="REALIZATION">
+      <point x="0.0" y="-94.0" />
+      <point x="982.0" y="169.0" />
+      <point x="612.5" y="169.0" />
+      <point x="0.0" y="72.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="0.869942196531792" showDependencies="false" x="571.5" y="336.0" />
+  <SelectedNodes>
+    <node>dev.patika.fifthhomework.controller.BaseController</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>public</VISIBILITY>
+</Diagram>
+

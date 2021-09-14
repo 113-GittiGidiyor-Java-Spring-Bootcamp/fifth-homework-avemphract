@@ -18,6 +18,7 @@ public class CustomInterception implements AsyncHandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         salaryUpdateRequestInfo.setClientUrl(request.getRemoteAddr());
         salaryUpdateRequestInfo.setSessionId(request.getSession().getId());
+        salaryUpdateRequestInfo.setRequestURI(request.getRequestURL().toString());
         return true;
     }
 }
