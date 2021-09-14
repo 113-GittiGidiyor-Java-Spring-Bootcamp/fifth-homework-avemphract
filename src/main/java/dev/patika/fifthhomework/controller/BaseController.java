@@ -1,7 +1,7 @@
-package dev.patika.fourthhomeworkavemphract.controller;
+package dev.patika.fifthhomework.controller;
 
-import dev.patika.fourthhomeworkavemphract.dto.BaseDTO;
-import dev.patika.fourthhomeworkavemphract.model.BaseEntity;
+
+import dev.patika.fifthhomework.dto.BaseDTO;
 import org.springframework.http.ResponseEntity;
 
 import java.util.List;

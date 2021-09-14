@@ -1,14 +1,12 @@
-package dev.patika.fourthhomeworkavemphract.controller;
+package dev.patika.fifthhomework.controller;
 
-import dev.patika.fourthhomeworkavemphract.dto.CourseDTO;
-import dev.patika.fourthhomeworkavemphract.mapper.CourseMapper;
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import dev.patika.fourthhomeworkavemphract.service.CourseService;
+import dev.patika.fifthhomework.dto.CourseDTO;
+import dev.patika.fifthhomework.mapper.CourseMapper;
+import dev.patika.fifthhomework.service.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.websocket.server.PathParam;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,41 +26,41 @@ public class CourseController implements BaseController<CourseDTO> {
     @GetMapping
     public ResponseEntity<List<CourseDTO>> findAll() {
         List<CourseDTO> courseDTOList=new ArrayList<>();
-        courseService.findAll().forEach(c->courseDTOList.add(courseMapper.courseToCourseDTO(c)));
+        courseService.findAll().forEach(c->courseDTOList.add(courseMapper.toCourseDTO(c)));
         return ResponseEntity.ok(courseDTOList);
     }
 
     @Override
     @GetMapping("/{id}")
     public ResponseEntity<CourseDTO> findById(@PathVariable int id) {
-        return ResponseEntity.ok(courseMapper.courseToCourseDTO(courseService.findById(id)));
+        return ResponseEntity.ok(courseMapper.toCourseDTO(courseService.findById(id)));
     }
 
     @GetMapping("/course_code/{code}")
     public ResponseEntity<CourseDTO> findByCode(@PathVariable String code){
-        return ResponseEntity.ok(courseMapper.courseToCourseDTO(courseService.findByCode(code)));
+        return ResponseEntity.ok(courseMapper.toCourseDTO(courseService.findByCode(code)));
     }
 
     @Override
     @PostMapping("")
     public ResponseEntity<CourseDTO> save(@RequestBody CourseDTO body) {
-        return ResponseEntity.ok(courseMapper.courseToCourseDTO(courseService.save(body)));
+        return ResponseEntity.ok(courseMapper.toCourseDTO(courseService.save(courseMapper.toCourse(body))));
     }
 
     @Override
     @PutMapping("")
     public ResponseEntity<CourseDTO> update(@RequestBody CourseDTO body) {
-        return ResponseEntity.ok(courseMapper.courseToCourseDTO(courseService.update(body)));
+        return ResponseEntity.ok(courseMapper.toCourseDTO(courseService.update(courseMapper.toCourse(body))));
     }
 
     @Override
     @DeleteMapping("/{id}")
     public ResponseEntity<CourseDTO> deleteById(@PathVariable int id) {
-        return ResponseEntity.ok(courseMapper.courseToCourseDTO(courseService.deleteById(id)));
+        return ResponseEntity.ok(courseMapper.toCourseDTO(courseService.deleteById(id)));
     }
 
     @DeleteMapping("/name/{code}")
     public ResponseEntity<CourseDTO> deleteByCode(@PathVariable String code){
-        return ResponseEntity.ok(courseMapper.courseToCourseDTO(courseService.deleteByCode(code)));
+        return ResponseEntity.ok(courseMapper.toCourseDTO(courseService.deleteByCode(code)));
     }
 }

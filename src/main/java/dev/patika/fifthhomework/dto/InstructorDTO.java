@@ -1,8 +1,7 @@
-package dev.patika.fourthhomeworkavemphract.dto;
+package dev.patika.fifthhomework.dto;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
-import dev.patika.fourthhomeworkavemphract.model.Course;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

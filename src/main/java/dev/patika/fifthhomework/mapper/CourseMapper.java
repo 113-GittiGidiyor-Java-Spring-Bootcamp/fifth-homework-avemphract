@@ -1,21 +1,18 @@
-package dev.patika.fourthhomeworkavemphract.mapper;
+package dev.patika.fifthhomework.mapper;
 
-import dev.patika.fourthhomeworkavemphract.dto.CourseDTO;
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import dev.patika.fourthhomeworkavemphract.model.Instructor;
-import dev.patika.fourthhomeworkavemphract.model.Student;
-import dev.patika.fourthhomeworkavemphract.service.CourseService;
-import dev.patika.fourthhomeworkavemphract.service.InstructorService;
-import dev.patika.fourthhomeworkavemphract.service.StudentService;
+import dev.patika.fifthhomework.dto.CourseDTO;
+import dev.patika.fifthhomework.model.Course;
+import dev.patika.fifthhomework.model.Student;
+import dev.patika.fifthhomework.service.CourseService;
+import dev.patika.fifthhomework.service.InstructorService;
+import dev.patika.fifthhomework.service.StudentService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
-import java.util.function.Consumer;
 
 @Mapper(componentModel = "spring")
 public abstract class CourseMapper {
@@ -31,13 +28,13 @@ public abstract class CourseMapper {
             @Mapping(target = "instructor", expression = "java(instructorService.findById(courseDTO.getInstructorId()))"),
             @Mapping(target = "students", expression = "java(getStudents(courseDTO))")
     })
-    public abstract Course courseDTOtoCourse(CourseDTO courseDTO);
+    public abstract Course toCourse(CourseDTO courseDTO);
 
     @Mappings({
             @Mapping(target = "instructorId", expression = "java(getInstructorId(course))"),
             @Mapping(target = "studentsId", expression = "java(getStudentsId(course))")
     })
-    public abstract CourseDTO courseToCourseDTO(Course course);
+    public abstract CourseDTO toCourseDTO(Course course);
 
     protected Set<Integer> getStudentsId(Course course){
         Set<Integer> studentsIdSet=new HashSet<>();

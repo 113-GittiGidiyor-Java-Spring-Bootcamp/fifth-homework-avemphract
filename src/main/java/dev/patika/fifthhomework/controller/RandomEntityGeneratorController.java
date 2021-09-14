@@ -1,17 +1,18 @@
-package dev.patika.fourthhomeworkavemphract.controller;
+package dev.patika.fifthhomework.controller;
 
-import dev.patika.fourthhomeworkavemphract.mapper.CourseMapper;
-import dev.patika.fourthhomeworkavemphract.mapper.InstructorMapper;
-import dev.patika.fourthhomeworkavemphract.mapper.StudentMapper;
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import dev.patika.fourthhomeworkavemphract.model.Instructor;
-import dev.patika.fourthhomeworkavemphract.model.Student;
-import dev.patika.fourthhomeworkavemphract.service.CourseService;
-import dev.patika.fourthhomeworkavemphract.service.InstructorService;
-import dev.patika.fourthhomeworkavemphract.service.StudentService;
-import dev.patika.fourthhomeworkavemphract.utils.RandomCourseGenerator;
-import dev.patika.fourthhomeworkavemphract.utils.RandomInstructorGenerator;
-import dev.patika.fourthhomeworkavemphract.utils.RandomStudentGenerator;
+
+import dev.patika.fifthhomework.mapper.CourseMapper;
+import dev.patika.fifthhomework.mapper.InstructorMapper;
+import dev.patika.fifthhomework.mapper.StudentMapper;
+import dev.patika.fifthhomework.model.Course;
+import dev.patika.fifthhomework.model.Instructor;
+import dev.patika.fifthhomework.model.Student;
+import dev.patika.fifthhomework.service.CourseService;
+import dev.patika.fifthhomework.service.InstructorService;
+import dev.patika.fifthhomework.service.StudentService;
+import dev.patika.fifthhomework.utils.RandomCourseGenerator;
+import dev.patika.fifthhomework.utils.RandomInstructorGenerator;
+import dev.patika.fifthhomework.utils.RandomStudentGenerator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -62,26 +63,26 @@ public class RandomEntityGeneratorController {
         List<Instructor> instructorList = new ArrayList<>();
         List<Student> studentList = new ArrayList<>();
         for (int i=0;i<courseCount;i++){
-            courseList.add(courseService.save(courseMapper.courseToCourseDTO(courseGenerator.generateCourse())));
+            courseList.add(courseService.save(courseGenerator.generateCourse()));
         }
         for (int i=0;i<instructorCount;i++){
-            instructorList.add(instructorService.save(instructorMapper.instructorToInstructorDTO(instructorGenerator.generateInstructor())));
+            instructorList.add(instructorService.save(instructorGenerator.generateInstructor()));
         }
         for (int i=0;i<studentCount;i++){
-            studentList.add(studentService.save(studentMapper.studentToStudentDTO(studentGenerator.generateRandomStudent())));
+            studentList.add(studentService.save(studentGenerator.generateRandomStudent()));
         }
 
         instructorGenerator.setCourses(instructorList,courseList);
         studentGenerator.setCourses(studentList,courseList);
 
         for (Course course:courseList){
-            courseService.update(courseMapper.courseToCourseDTO(course));
+            courseService.update(course);
         }
         for (Student student:studentList){
-            studentService.update(studentMapper.studentToStudentDTO(student));
+            studentService.update(student);
         }
         for (Instructor instructor:instructorList){
-            instructorService.update(instructorMapper.instructorToInstructorDTO(instructor));
+            instructorService.update(instructor);
         }
         return ResponseEntity.ok("Generated courses count: "+courseCount+"\nGenerated instructors count: "+instructorCount+"\nGenerated students count: "+studentCount);
     }

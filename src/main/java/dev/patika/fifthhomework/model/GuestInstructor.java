@@ -1,4 +1,4 @@
-package dev.patika.fourthhomeworkavemphract.model;
+package dev.patika.fifthhomework.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

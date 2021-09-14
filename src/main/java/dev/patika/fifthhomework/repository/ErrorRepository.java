@@ -1,12 +1,12 @@
-package dev.patika.fourthhomeworkavemphract.repository;
+package dev.patika.fifthhomework.repository;
 
-import dev.patika.fourthhomeworkavemphract.exception.ErrorEntity;
+
+import dev.patika.fifthhomework.exception.ErrorEntity;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
-import java.time.LocalDate;
 import java.util.List;
 
 @Repository

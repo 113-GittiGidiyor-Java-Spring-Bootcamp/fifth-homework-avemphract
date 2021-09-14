@@ -1,4 +1,4 @@
-package dev.patika.fourthhomeworkavemphract.model;
+package dev.patika.fifthhomework.model;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;

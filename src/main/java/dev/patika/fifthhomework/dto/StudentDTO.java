@@ -1,6 +1,5 @@
-package dev.patika.fourthhomeworkavemphract.dto;
+package dev.patika.fifthhomework.dto;
 
-import dev.patika.fourthhomeworkavemphract.model.Course;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

@@ -1,7 +1,7 @@
-package dev.patika.fourthhomeworkavemphract.exception;
+package dev.patika.fifthhomework.exception;
 
-import dev.patika.fourthhomeworkavemphract.model.BaseEntity;
-import dev.patika.fourthhomeworkavemphract.service.ErrorService;
+import dev.patika.fifthhomework.model.BaseEntity;
+import dev.patika.fifthhomework.service.ErrorService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

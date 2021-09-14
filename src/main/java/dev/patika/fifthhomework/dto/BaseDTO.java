@@ -1,4 +1,4 @@
-package dev.patika.fourthhomeworkavemphract.dto;
+package dev.patika.fifthhomework.dto;
 
 public abstract class BaseDTO {
 }

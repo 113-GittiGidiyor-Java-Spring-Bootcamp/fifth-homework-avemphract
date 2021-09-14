@@ -1,7 +1,7 @@
-package dev.patika.fourthhomeworkavemphract.utils;
+package dev.patika.fifthhomework.utils;
 
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import dev.patika.fourthhomeworkavemphract.model.Student;
+import dev.patika.fifthhomework.model.Course;
+import dev.patika.fifthhomework.model.Student;
 
 import java.time.LocalDate;
 import java.time.Month;

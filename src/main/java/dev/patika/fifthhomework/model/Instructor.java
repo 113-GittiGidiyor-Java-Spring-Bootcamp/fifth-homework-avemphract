@@ -1,4 +1,4 @@
-package dev.patika.fourthhomeworkavemphract.model;
+package dev.patika.fifthhomework.model;
 
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import com.fasterxml.jackson.annotation.JsonSubTypes;

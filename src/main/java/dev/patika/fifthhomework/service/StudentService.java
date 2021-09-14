@@ -1,13 +1,13 @@
-package dev.patika.fourthhomeworkavemphract.service;
+package dev.patika.fifthhomework.service;
 
-import dev.patika.fourthhomeworkavemphract.dto.StudentDTO;
-import dev.patika.fourthhomeworkavemphract.exception.AbsentEntityException;
-import dev.patika.fourthhomeworkavemphract.exception.StudentAgeNotValidException;
-import dev.patika.fourthhomeworkavemphract.exception.StudentNumberForOneCourseExceededException;
-import dev.patika.fourthhomeworkavemphract.mapper.StudentMapper;
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import dev.patika.fourthhomeworkavemphract.model.Student;
-import dev.patika.fourthhomeworkavemphract.repository.StudentRepository;
+import dev.patika.fifthhomework.exception.AbsentEntityException;
+import dev.patika.fifthhomework.exception.StudentAgeNotValidException;
+import dev.patika.fifthhomework.exception.StudentNumberForOneCourseExceededException;
+import dev.patika.fifthhomework.mapper.StudentMapper;
+import dev.patika.fifthhomework.model.Course;
+import dev.patika.fifthhomework.model.Student;
+import dev.patika.fifthhomework.repository.StudentRepository;
+import javafx.util.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -20,7 +20,7 @@ import java.util.Optional;
 
 
 @Service
-public class StudentService implements BaseService<Student, StudentDTO> {
+public class StudentService implements BaseService<Student> {
     private static final int MINIMUM_AGE=18;
     private static final int MAXIMUM_AGE=40;
     @Autowired
@@ -59,7 +59,7 @@ public class StudentService implements BaseService<Student, StudentDTO> {
      */
     @Override
     @Transactional(readOnly = false)
-    public Student save(StudentDTO object) {
+    public Student save(Student object) {
         Student student=verify(object);
         return studentRepository.save(student);
     }
@@ -86,7 +86,7 @@ public class StudentService implements BaseService<Student, StudentDTO> {
      */
     @Transactional(readOnly = false)
     public Student deleteByName(String name) {
-        Optional<Student> optional = Optional.of(studentRepository.findByName(name));
+        Optional<Student> optional = Optional.ofNullable(studentRepository.findByName(name));
         if (!optional.isPresent())
             throw new AbsentEntityException(Student.class,0);
         studentRepository.deleteByName(name);
@@ -100,7 +100,7 @@ public class StudentService implements BaseService<Student, StudentDTO> {
      */
     @Override
     @Transactional(readOnly = false)
-    public Student update(StudentDTO object) {
+    public Student update(Student object) {
         if (!studentRepository.isIdExists(object.getId()))
             throw new AbsentEntityException(Student.class,object.getId());
         Student student=verify(object);
@@ -112,7 +112,7 @@ public class StudentService implements BaseService<Student, StudentDTO> {
      * @return Address-Count
      */
     @Transactional(readOnly = true)
-    public List<?> groupByAddress(){
+    public List<Pair<String,Long>> groupByAddress(){
         return studentRepository.groupByAddress();
     }
 
@@ -121,22 +121,21 @@ public class StudentService implements BaseService<Student, StudentDTO> {
      * @return Gender-Count
      */
     @Transactional(readOnly = true)
-    public List<?> groupByGender(){
+    public List<Pair<String,Long>> groupByGender(){
         return studentRepository.groupByGender();
     }
 
-    private Student verify(StudentDTO object) {
+    private Student verify(Student object) {
         int age = Period.between(object.getBirthDate(), LocalDate.now()).getYears();
         if (!(MINIMUM_AGE<=age && age<=MAXIMUM_AGE))
-            throw new StudentAgeNotValidException(studentMapper.studentDTOtoStudent(object));
-        Student student=studentMapper.studentDTOtoStudent(object);
-        for (Course course:student.getCourses()){
-            if (!course.getStudents().contains(student) && course.getStudents().size()>19)
+            throw new StudentAgeNotValidException(object);
+        for (Course course:object.getCourses()){
+            if (!course.getStudents().contains(object) && course.getStudents().size()>19)
                 throw new StudentNumberForOneCourseExceededException(course);
-            if (course.getStudents().contains(student) && course.getStudents().size()>20)
+            if (course.getStudents().contains(object) && course.getStudents().size()>20)
                 throw new StudentNumberForOneCourseExceededException(course);
         }
-        return student;
+        return object;
     }
 
 }

@@ -1,4 +1,4 @@
-package dev.patika.fourthhomeworkavemphract.config;
+package dev.patika.fifthhomework.config;
 
 import org.springframework.context.annotation.Bean;
 import springfox.documentation.builders.PathSelectors;

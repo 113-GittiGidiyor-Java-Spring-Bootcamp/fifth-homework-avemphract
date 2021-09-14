@@ -1,8 +1,9 @@
-package dev.patika.fourthhomeworkavemphract.service;
+package dev.patika.fifthhomework.service;
 
-import dev.patika.fourthhomeworkavemphract.exception.AbsentEntityException;
-import dev.patika.fourthhomeworkavemphract.exception.ErrorEntity;
-import dev.patika.fourthhomeworkavemphract.repository.ErrorRepository;
+
+import dev.patika.fifthhomework.exception.AbsentEntityException;
+import dev.patika.fifthhomework.exception.ErrorEntity;
+import dev.patika.fifthhomework.repository.ErrorRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

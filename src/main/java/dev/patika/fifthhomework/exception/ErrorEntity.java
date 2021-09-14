@@ -1,6 +1,6 @@
-package dev.patika.fourthhomeworkavemphract.exception;
+package dev.patika.fifthhomework.exception;
 
-import dev.patika.fourthhomeworkavemphract.model.BaseEntity;
+import dev.patika.fifthhomework.model.BaseEntity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 

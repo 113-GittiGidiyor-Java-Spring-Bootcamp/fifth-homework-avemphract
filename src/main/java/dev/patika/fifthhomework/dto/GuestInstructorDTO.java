@@ -1,4 +1,4 @@
-package dev.patika.fourthhomeworkavemphract.dto;
+package dev.patika.fifthhomework.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

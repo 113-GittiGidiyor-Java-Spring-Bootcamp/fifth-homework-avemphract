@@ -1,13 +1,12 @@
-package dev.patika.fourthhomeworkavemphract.service;
+package dev.patika.fifthhomework.service;
 
-import dev.patika.fourthhomeworkavemphract.dto.CourseDTO;
-import dev.patika.fourthhomeworkavemphract.exception.AbsentEntityException;
-import dev.patika.fourthhomeworkavemphract.exception.CourseIsAlreadyExistException;
-import dev.patika.fourthhomeworkavemphract.exception.StudentNumberForOneCourseExceededException;
-import dev.patika.fourthhomeworkavemphract.mapper.CourseMapper;
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import dev.patika.fourthhomeworkavemphract.model.Student;
-import dev.patika.fourthhomeworkavemphract.repository.CourseRepository;
+import dev.patika.fifthhomework.exception.AbsentEntityException;
+import dev.patika.fifthhomework.exception.CourseIsAlreadyExistException;
+import dev.patika.fifthhomework.exception.StudentNumberForOneCourseExceededException;
+import dev.patika.fifthhomework.mapper.CourseMapper;
+import dev.patika.fifthhomework.model.Course;
+import dev.patika.fifthhomework.model.Student;
+import dev.patika.fifthhomework.repository.CourseRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -17,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class CourseService implements BaseService<Course, CourseDTO> {
+public class CourseService implements BaseService<Course> {
     @Autowired
     private CourseRepository courseRepository;
     @Autowired
@@ -52,7 +51,7 @@ public class CourseService implements BaseService<Course, CourseDTO> {
      * @return Course
      */
     public Course findByCode(String courseCode){
-        Optional<Course> optionalCourse=Optional.of(courseRepository.findByCourseCode(courseCode));
+        Optional<Course> optionalCourse=Optional.ofNullable(courseRepository.findByCourseCode(courseCode));
         if (!optionalCourse.isPresent())
             throw new AbsentEntityException(Course.class,0);
         return optionalCourse.get();
@@ -60,12 +59,11 @@ public class CourseService implements BaseService<Course, CourseDTO> {
 
     /**
      * Save course and return this course
-     * @param object CourseDTO
+     * @param course Course
      * @return Course
      */
     @Override @Transactional(readOnly = false)
-    public Course save(CourseDTO object) {
-        Course course=courseMapper.courseDTOtoCourse(object);
+    public Course save(Course course) {
         if (courseRepository.isCodeExists(course.getCourseCode()))
             throw new CourseIsAlreadyExistException(course);
         if (course.getStudents().size()>20)
@@ -95,12 +93,12 @@ public class CourseService implements BaseService<Course, CourseDTO> {
      */
     @Transactional(readOnly = false)
     public Course deleteByCode(String courseCode){
-        Optional<Course> optional = Optional.of(courseRepository.findByCourseCode(courseCode));
-        if (!optional.isPresent())
+        Course course = courseRepository.findByCourseCode(courseCode);
+        if (course==null)
             throw new AbsentEntityException(Course.class,0);
-        deleting(optional.get());
-        courseRepository.delete(optional.get());
-        return optional.get();
+        deleting(course);
+        courseRepository.delete(course);
+        return course;
     }
 
     private void deleting(Course course){
@@ -116,13 +114,13 @@ public class CourseService implements BaseService<Course, CourseDTO> {
      * @return Course
      */
     @Override @Transactional(readOnly = false)
-    public Course update(CourseDTO object) {
+    public Course update(Course object) {
         if (!courseRepository.isIdExists(object.getId()))
             throw new AbsentEntityException(Course.class,object.getId());
         Course sameCode=courseRepository.findByCourseCode(object.getCourseCode());
         if (sameCode!=null && !sameCode.getId().equals(object.getId()))
             throw new CourseIsAlreadyExistException(sameCode);
-        return courseRepository.save(courseMapper.courseDTOtoCourse(object));
+        return courseRepository.save(object);
     }
 
 }

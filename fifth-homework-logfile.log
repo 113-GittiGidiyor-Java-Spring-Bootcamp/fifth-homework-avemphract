@@ -1,0 +1,138 @@
+2021-09-14 00:56:23.663  INFO 27724 --- [main] d.p.f.FifthHomeworkAvemphractApplication : Starting FifthHomeworkAvemphractApplication using Java 1.8.0_292 on DESKTOP-1DBCT9N with PID 27724 (C:\Users\Katafrakt\Desktop\fifth-homework-avemphract\target\classes started by Katafrakt in C:\Users\Katafrakt\Desktop\fifth-homework-avemphract)
+2021-09-14 00:56:23.675  INFO 27724 --- [main] d.p.f.FifthHomeworkAvemphractApplication : No active profile set, falling back to default profiles: default
+2021-09-14 00:56:26.427  INFO 27724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-14 00:56:26.521  INFO 27724 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 80 ms. Found 5 JPA repository interfaces.
+2021-09-14 00:56:27.176  INFO 27724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-14 00:56:27.188  INFO 27724 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-14 00:56:27.189  INFO 27724 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-14 00:56:27.286  INFO 27724 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-14 00:56:27.286  INFO 27724 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3555 ms
+2021-09-14 00:56:27.393  INFO 27724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-14 00:56:27.605  INFO 27724 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-14 00:56:27.614  INFO 27724 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-09-14 00:56:27.775  INFO 27724 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-14 00:56:27.860  INFO 27724 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-14 00:56:28.010  INFO 27724 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-14 00:56:28.181  INFO 27724 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-14 00:56:29.237  INFO 27724 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-14 00:56:29.249  INFO 27724 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-14 00:56:30.187  WARN 27724 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-14 00:56:30.399  INFO 27724 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-09-14 00:56:30.475  INFO 27724 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-14 00:56:30.827  INFO 27724 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-14 00:56:30.828  INFO 27724 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-09-14 00:56:30.856  INFO 27724 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-09-14 00:56:30.914  INFO 27724 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-09-14 00:56:31.080  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
+2021-09-14 00:56:31.090  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_1
+2021-09-14 00:56:31.098  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByIdUsingDELETE_1
+2021-09-14 00:56:31.101  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
+2021-09-14 00:56:31.103  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_2
+2021-09-14 00:56:31.110  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2021-09-14 00:56:31.112  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2021-09-14 00:56:31.117  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-09-14 00:56:31.119  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-09-14 00:56:31.120  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingDELETE_1
+2021-09-14 00:56:31.121  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2021-09-14 00:56:31.122  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_4
+2021-09-14 00:56:31.124  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_5
+2021-09-14 00:56:31.125  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_6
+2021-09-14 00:56:31.126  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_7
+2021-09-14 00:56:31.128  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_8
+2021-09-14 00:56:31.129  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_9
+2021-09-14 00:56:31.130  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_10
+2021-09-14 00:56:31.131  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_11
+2021-09-14 00:56:31.132  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_12
+2021-09-14 00:56:31.133  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_13
+2021-09-14 00:56:31.136  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_14
+2021-09-14 00:56:31.137  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_15
+2021-09-14 00:56:31.138  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_16
+2021-09-14 00:56:31.140  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_17
+2021-09-14 00:56:31.142  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_18
+2021-09-14 00:56:31.143  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_19
+2021-09-14 00:56:31.149  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByIdUsingDELETE_2
+2021-09-14 00:56:31.150  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_3
+2021-09-14 00:56:31.151  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_3
+2021-09-14 00:56:31.156  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByIdUsingDELETE_3
+2021-09-14 00:56:31.158  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByNameUsingDELETE_1
+2021-09-14 00:56:31.159  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_4
+2021-09-14 00:56:31.160  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_4
+2021-09-14 00:56:31.165  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_2
+2021-09-14 00:56:31.166  INFO 27724 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2021-09-14 00:56:31.195  INFO 27724 --- [main] d.p.f.FifthHomeworkAvemphractApplication : Started FifthHomeworkAvemphractApplication in 8.06 seconds (JVM running for 9.088)
+2021-09-14 00:56:31.736  INFO 27724 --- [RMI TCP Connection(1)-192.168.56.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-14 00:56:31.736  INFO 27724 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-14 00:56:31.738  INFO 27724 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-09-14 00:57:03.919  INFO 27724 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-14 00:57:03.919  INFO 27724 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-09-14 00:57:03.987  INFO 27724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-09-14 00:57:03.992  INFO 27724 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-09-14 00:57:16.198  INFO 24088 --- [main] d.p.f.FifthHomeworkAvemphractApplication : Starting FifthHomeworkAvemphractApplication using Java 1.8.0_292 on DESKTOP-1DBCT9N with PID 24088 (C:\Users\Katafrakt\Desktop\fifth-homework-avemphract\target\classes started by Katafrakt in C:\Users\Katafrakt\Desktop\fifth-homework-avemphract)
+2021-09-14 00:57:16.202  INFO 24088 --- [main] d.p.f.FifthHomeworkAvemphractApplication : No active profile set, falling back to default profiles: default
+2021-09-14 00:57:17.204  INFO 24088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-09-14 00:57:17.263  INFO 24088 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+2021-09-14 00:57:17.623  INFO 24088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-09-14 00:57:17.629  INFO 24088 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-09-14 00:57:17.629  INFO 24088 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.52]
+2021-09-14 00:57:17.705  INFO 24088 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-09-14 00:57:17.706  INFO 24088 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1463 ms
+2021-09-14 00:57:17.783  INFO 24088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-09-14 00:57:17.901  INFO 24088 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-09-14 00:57:17.905  INFO 24088 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2021-09-14 00:57:18.003  INFO 24088 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-09-14 00:57:18.038  INFO 24088 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.32.Final
+2021-09-14 00:57:18.124  INFO 24088 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-09-14 00:57:18.204  INFO 24088 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-09-14 00:57:18.814  INFO 24088 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-09-14 00:57:18.822  INFO 24088 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-09-14 00:57:19.329  WARN 24088 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-09-14 00:57:19.622  INFO 24088 --- [main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 14 endpoint(s) beneath base path '/actuator'
+2021-09-14 00:57:19.669  INFO 24088 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-09-14 00:57:19.910  INFO 24088 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-09-14 00:57:19.911  INFO 24088 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2021-09-14 00:57:19.925  INFO 24088 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2021-09-14 00:57:19.964  INFO 24088 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2021-09-14 00:57:20.067  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_1
+2021-09-14 00:57:20.076  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_1
+2021-09-14 00:57:20.082  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByIdUsingDELETE_1
+2021-09-14 00:57:20.085  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_2
+2021-09-14 00:57:20.085  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_2
+2021-09-14 00:57:20.090  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_1
+2021-09-14 00:57:20.092  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_1
+2021-09-14 00:57:20.096  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_1
+2021-09-14 00:57:20.096  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingDELETE_1
+2021-09-14 00:57:20.097  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_2
+2021-09-14 00:57:20.098  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_3
+2021-09-14 00:57:20.098  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_4
+2021-09-14 00:57:20.099  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_5
+2021-09-14 00:57:20.100  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_6
+2021-09-14 00:57:20.100  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_7
+2021-09-14 00:57:20.101  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_8
+2021-09-14 00:57:20.102  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_9
+2021-09-14 00:57:20.103  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_10
+2021-09-14 00:57:20.103  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_11
+2021-09-14 00:57:20.104  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_12
+2021-09-14 00:57:20.105  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_13
+2021-09-14 00:57:20.106  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_14
+2021-09-14 00:57:20.107  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_15
+2021-09-14 00:57:20.108  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_16
+2021-09-14 00:57:20.108  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_17
+2021-09-14 00:57:20.109  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_18
+2021-09-14 00:57:20.110  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: handleUsingGET_19
+2021-09-14 00:57:20.113  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByIdUsingDELETE_2
+2021-09-14 00:57:20.114  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_3
+2021-09-14 00:57:20.115  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_3
+2021-09-14 00:57:20.118  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByIdUsingDELETE_3
+2021-09-14 00:57:20.119  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: deleteByNameUsingDELETE_1
+2021-09-14 00:57:20.119  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findAllUsingGET_4
+2021-09-14 00:57:20.120  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: findByIdUsingGET_4
+2021-09-14 00:57:20.124  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: saveUsingPOST_2
+2021-09-14 00:57:20.125  INFO 24088 --- [main] .d.s.w.r.o.CachingOperationNameGenerator : Generating unique operation named: updateUsingPUT_2
+2021-09-14 00:57:20.148  INFO 24088 --- [main] d.p.f.FifthHomeworkAvemphractApplication : Started FifthHomeworkAvemphractApplication in 4.345 seconds (JVM running for 5.617)
+2021-09-14 00:57:20.840  INFO 24088 --- [RMI TCP Connection(1)-192.168.56.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-09-14 00:57:20.841  INFO 24088 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-09-14 00:57:20.843  INFO 24088 --- [RMI TCP Connection(1)-192.168.56.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-09-14 00:58:28.876  INFO 24088 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-09-14 00:58:28.876  INFO 24088 --- [SpringApplicationShutdownHook] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
+2021-09-14 00:58:28.881  INFO 24088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-09-14 00:58:28.885  INFO 24088 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

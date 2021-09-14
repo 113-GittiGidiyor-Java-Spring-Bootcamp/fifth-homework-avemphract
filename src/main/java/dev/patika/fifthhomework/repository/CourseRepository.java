@@ -1,7 +1,6 @@
-package dev.patika.fourthhomeworkavemphract.repository;
+package dev.patika.fifthhomework.repository;
 
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import org.springframework.data.jpa.repository.Modifying;
+import dev.patika.fifthhomework.model.Course;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

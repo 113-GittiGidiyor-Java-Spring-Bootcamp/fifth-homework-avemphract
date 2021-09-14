@@ -1,14 +1,13 @@
-package dev.patika.fourthhomeworkavemphract.service;
+package dev.patika.fifthhomework.service;
 
-import dev.patika.fourthhomeworkavemphract.dto.BaseDTO;
-import dev.patika.fourthhomeworkavemphract.model.BaseEntity;
+import dev.patika.fifthhomework.model.BaseEntity;
 
 import java.util.List;
 
-public interface BaseService<T extends BaseEntity,D extends BaseDTO> {
+public interface BaseService<T extends BaseEntity> {
     List<T> findAll();
     T findById(int id);
-    T save(D object);
+    T save(T object);
     T deleteById(int id);
-    T update(D object);
+    T update(T object);
 }

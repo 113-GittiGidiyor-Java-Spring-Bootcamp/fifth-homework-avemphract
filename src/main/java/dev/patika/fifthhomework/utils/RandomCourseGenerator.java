@@ -1,6 +1,7 @@
-package dev.patika.fourthhomeworkavemphract.utils;
+package dev.patika.fifthhomework.utils;
 
-import dev.patika.fourthhomeworkavemphract.model.Course;
+
+import dev.patika.fifthhomework.model.Course;
 
 import java.util.HashSet;
 import java.util.List;

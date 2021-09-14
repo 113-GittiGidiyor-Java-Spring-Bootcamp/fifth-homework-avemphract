@@ -1,14 +1,14 @@
-package dev.patika.fourthhomeworkavemphract.mapper;
+package dev.patika.fifthhomework.mapper;
 
-import dev.patika.fourthhomeworkavemphract.dto.GuestInstructorDTO;
-import dev.patika.fourthhomeworkavemphract.dto.InstructorDTO;
-import dev.patika.fourthhomeworkavemphract.dto.RegularInstructorDTO;
-import dev.patika.fourthhomeworkavemphract.model.Course;
-import dev.patika.fourthhomeworkavemphract.model.GuestInstructor;
-import dev.patika.fourthhomeworkavemphract.model.Instructor;
-import dev.patika.fourthhomeworkavemphract.model.RegularInstructor;
-import dev.patika.fourthhomeworkavemphract.service.CourseService;
-import dev.patika.fourthhomeworkavemphract.service.InstructorService;
+import dev.patika.fifthhomework.dto.GuestInstructorDTO;
+import dev.patika.fifthhomework.dto.InstructorDTO;
+import dev.patika.fifthhomework.dto.RegularInstructorDTO;
+import dev.patika.fifthhomework.model.Course;
+import dev.patika.fifthhomework.model.GuestInstructor;
+import dev.patika.fifthhomework.model.Instructor;
+import dev.patika.fifthhomework.model.RegularInstructor;
+import dev.patika.fifthhomework.service.CourseService;
+import dev.patika.fifthhomework.service.InstructorService;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;
@@ -31,14 +31,14 @@ public abstract class InstructorMapper {
     @Mappings({
             @Mapping(target = "courses", expression = "java(instructorsCourses(instructorDTO))")
     })
-    public abstract Instructor instructorDTOtoInstructor(InstructorDTO instructorDTO);
+    public abstract Instructor toInstructor(InstructorDTO instructorDTO);
     @Mappings({
             @Mapping(target = "coursesId",expression = "java(instructorsCoursesId(instructor))")
     })
-    public abstract InstructorDTO instructorToInstructorDTO(Instructor instructor);
+    public abstract InstructorDTO toInstructorDTO(Instructor instructor);
 
     @ObjectFactory
-    protected InstructorDTO toInstructorDTO(Instructor instructor){
+    protected InstructorDTO factoryDTO(Instructor instructor){
         if (instructor==null){
             throw new RuntimeException();
         }
@@ -58,7 +58,7 @@ public abstract class InstructorMapper {
     }
 
     @ObjectFactory
-    protected Instructor toInstructor(InstructorDTO instructorDTO){
+    protected Instructor factoryEntity(InstructorDTO instructorDTO){
         if (instructorDTO==null){
             throw new RuntimeException();
         }

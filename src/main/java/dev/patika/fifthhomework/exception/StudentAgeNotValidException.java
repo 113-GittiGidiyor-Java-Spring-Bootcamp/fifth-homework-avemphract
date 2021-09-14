@@ -1,12 +1,10 @@
-package dev.patika.fourthhomeworkavemphract.exception;
+package dev.patika.fifthhomework.exception;
 
-import dev.patika.fourthhomeworkavemphract.model.Student;
+import dev.patika.fifthhomework.model.Student;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-import java.time.Duration;
 import java.time.LocalDate;
-import java.time.LocalTime;
 import java.time.Period;
 
 @EqualsAndHashCode(callSuper = false)

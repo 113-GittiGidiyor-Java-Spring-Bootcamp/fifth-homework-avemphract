@@ -9,7 +9,8 @@ import org.springframework.web.context.annotation.SessionScope;
 @NoArgsConstructor
 @Component
 @SessionScope
-public class SalaryUpdateRequestScope {
-    private String sessionId;
-    private String clientUrl;
+public class SalaryUpdateRequestInfo {
+    private String sessionId="";
+    private String clientUrl="";
+    private String requestURI="";
 }
