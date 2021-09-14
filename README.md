@@ -20,7 +20,7 @@ $ mvn spring-boot:run
 
 ## Entities
 Entity UML diagram
-![Entity](EntityDiagram.PNG)
+![Entity](EntityDiagram.png)
 
 ## Controllers
 Controller UML diagram
